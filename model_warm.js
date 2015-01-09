@@ -99,9 +99,12 @@ var Warm = (function(){
 
     var methodStructure = parseMethod(method);
 
-
+    // iterate and find lie starting with `this`
   };
   
-  return {tokenize: parseMethod};
+  return {
+    tokenize: parseMethod,
+    createSetter: Warm.createSetter
+  };
   
 })();
